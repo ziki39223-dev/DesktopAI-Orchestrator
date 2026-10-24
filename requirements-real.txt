@@ -1,0 +1,6 @@
+# Real 真机模式专属依赖（仅工作机需要；开发机不必安装）
+# 安装：pip install -r requirements-real.txt
+uiautomation>=2.0
+comtypes>=1.2
+pywin32>=306
+windows-capture>=1.3

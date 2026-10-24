@@ -1,0 +1,63 @@
+{
+  "rules_version": "2025-01-01-template",
+  "_comment": "模板文件：Electron 客户端的 UIA 控件路径会随版本变化，工作机上必须用 Inspect.exe 重新采集并回填。strategies 是有序降级链，按序尝试，全失败才报 CONTROL_NOT_FOUND。",
+  "clients": {
+    "trae": {
+      "display_name": "Trae",
+      "title_keywords": ["Trae"],
+      "class_name": "Chrome_WidgetWin_1",
+      "client_version": "待采集",
+      "collected_at": "待采集",
+      "input": [
+        { "type": "automation_id", "value": "chat-input", "notes": "示例值，必须替换" },
+        { "type": "control_type", "value": "edit", "index": 0, "notes": "兜底：第一个编辑框" }
+      ],
+      "send": [
+        { "type": "accelerator", "value": "{ENTER}", "notes": "多数 Electron 聊天框 Enter 直接发送" }
+      ],
+      "output": [
+        { "type": "automation_id", "value": "chat-list", "notes": "示例值，必须替换" },
+        { "type": "control_type", "value": "list", "index": 0, "notes": "兜底：第一个列表容器" }
+      ],
+      "completion_marker": "【Agent任务完成】"
+    },
+    "qoder": {
+      "display_name": "Qoder",
+      "title_keywords": ["Qoder"],
+      "class_name": "Chrome_WidgetWin_1",
+      "client_version": "待采集",
+      "collected_at": "待采集",
+      "input": [
+        { "type": "automation_id", "value": "chat-input", "notes": "示例值，必须替换" },
+        { "type": "control_type", "value": "edit", "index": 0, "notes": "兜底：第一个编辑框" }
+      ],
+      "send": [
+        { "type": "accelerator", "value": "{ENTER}", "notes": "若客户端用 Ctrl+Enter 发送需改这里" }
+      ],
+      "output": [
+        { "type": "automation_id", "value": "chat-list", "notes": "示例值，必须替换" },
+        { "type": "control_type", "value": "list", "index": 0, "notes": "兜底：第一个列表容器" }
+      ],
+      "completion_marker": "【Agent任务完成】"
+    },
+    "workbuddy": {
+      "display_name": "WorkBuddy",
+      "title_keywords": ["WorkBuddy"],
+      "class_name": "Chrome_WidgetWin_1",
+      "client_version": "待采集",
+      "collected_at": "待采集",
+      "input": [
+        { "type": "automation_id", "value": "chat-input", "notes": "示例值，必须替换" },
+        { "type": "control_type", "value": "edit", "index": 0, "notes": "兜底：第一个编辑框" }
+      ],
+      "send": [
+        { "type": "accelerator", "value": "{ENTER}", "notes": "多数 Electron 聊天框 Enter 直接发送" }
+      ],
+      "output": [
+        { "type": "automation_id", "value": "chat-list", "notes": "示例值，必须替换" },
+        { "type": "control_type", "value": "list", "index": 0, "notes": "兜底：第一个列表容器" }
+      ],
+      "completion_marker": "【Agent任务完成】"
+    }
+  }
+}

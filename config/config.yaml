@@ -1,0 +1,30 @@
+mode: mock # mock（开发机默认） / real（工作机）
+
+transport: sse # sse（主推） / stdio
+
+# 控件规则：工作机上用 Inspect.exe 采集后填充
+window_rules_path: config/window_rules.json
+
+# 日志目录；置空则不落文件（SSE 模式下建议保留）
+log_dir: logs
+
+server:
+  host: 127.0.0.1 # 局域网访问需改 0.0.0.0，并设置 auth_token
+  port: 8765
+  sse_path: /sse
+  message_path: /messages/
+  auth_token: "" # 非空时要求 Authorization: Bearer <token>
+  log_level: INFO
+
+# Mock 后端：编排侧容错联调可用它注入延迟与失败
+mock:
+  latency_s: 0.0
+  generating_polls: 0 # >0 时前 N 次 fetch_output 返回 generating
+  inject_errors: {} # 例：{"trae:send": "SEND_FAILED"}
+
+# Real 后端：工作机实测后按需调参
+real:
+  locate_attempts: 3
+  locate_delay_s: 0.3
+  poll_interval_s: 1.0
+  send_confirm_s: 2.0

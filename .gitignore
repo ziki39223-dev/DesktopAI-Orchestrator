@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+*.spec
+
+# 运行期
+logs/
+config/config.local.yaml
+*.log
+
+# 临时与探测（不入库、不进交付）
+.ai-workspace-runtime/
+devtools/tmp/
+tmp/
+
+# 真实采集数据（含本机信息，不入库）
+config/window_rules.local.json
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
